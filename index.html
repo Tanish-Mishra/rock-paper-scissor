@@ -32,6 +32,11 @@
 <main>
  <section class="game">
     <div class="game_wrapper">
+        <div class="lines">
+            <span class="line_one"></span>
+            <span class="line_two"></span>
+            <span class="line_three"></span>
+        </div>
         <button class="game_box">
             <img src="./icons/rock.svg" alt="rock" id="rock">
         </button>
@@ -41,14 +46,16 @@
         <div class="game_box paper">
             <img src="./icons/paper.svg" alt="paper" id="paper">
         </div>
+       
     </div>
+    
  </section>
 <!-- <button class="rules_btn">Rules</button> -->
 </main>
 <footer>
     <section class="rules">
         <div class="rules_wrapper">
-            <button class="close_btn">X</button>
+            <button class="close_btn"><img src="/icons/x.png" alt="x"></button>
             <h3>Game Rules</h3>
             <ul>
                 <li><img src="./icons/rectangle.svg" alt="rectangle"> &nbsp;Rock beats scissors, scissors beat paper, and paper beats rock.</li>
@@ -58,6 +65,8 @@
             </ul>
         </div>
      </section>
+     <button class="rules_btn btn_style" tabindex="1">Rules</button>
+     <button class="win_btn btn_style" tabindex="1">Next</button>
 </footer>
 </body>
 </html>

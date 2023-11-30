@@ -29,6 +29,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    /* flex-wrap: wrap; */
     border: 2px solid #fff;
     border-radius: 0.7rem;
   
@@ -78,6 +79,7 @@ header{
 }
 
 .game .game_wrapper {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -101,34 +103,66 @@ header{
 .game_box::before {
     content: '';
     position: absolute;
-    height: 6rem;
-    width: 6rem;
+    inset: -0.6rem;
+    /* height: 6rem;
+    width: 6rem; */
     border: none;
     border-radius: 100%;
     z-index: -1;
 }
 
-.game .game_box:nth-child(1)::before {
+.game .game_box:nth-child(2)::before {
   background-color: #0074B6;
 }
-.game .game_box:nth-child(2)::before {
+.game .game_box:nth-child(3)::before {
     background-color: #BD00FF;
 }
-.game .game_box:nth-child(3)::before {
+.game .game_box:nth-child(4)::before {
     background-color: #FFA943;
+   
 }
 
 .paper {
   position: absolute;
   top : 9rem;
 }
+                           /* Line Styles */
+.game_wrapper .lines {
+    position: absolute;
+}
+.game_wrapper .lines span{
+    position: absolute;
+    display: inline-block;
+    height: 18px;
+    width: 160px;
+    background: rgba(0, 0, 0, 0.64);
+    z-index: -1;
+    
+} 
+
+.game_wrapper .lines span:nth-child(1) {
+left: -5rem;
+top: 2.3rem;
+}
+.game_wrapper .lines span:nth-child(2) {
+    left: -9.5rem;
+    top: 6rem;
+    rotate: 50deg;
+    }
+    .game_wrapper .lines span:nth-child(3) {
+        left: -0.3rem;
+        top: 6rem;
+        rotate: 130deg;
+        }
+
 
                             /* Rules Styles  */
 
 .rules { 
     position: relative;
+    visibility: hidden;
     left: 70vw;
-    top: 10vh;
+    top: -2rem;
 }
 
 .rules_wrapper {
@@ -137,7 +171,6 @@ header{
     flex-direction: column;
     height: 20rem;
     width: 17rem;
-    
     background-color: #004429;
     border-radius: 0.8rem;
     font-size: 0.9rem;
@@ -147,14 +180,13 @@ header{
 }
 .rules_wrapper::before {
        position: absolute;
-       top: -0.4rem;
+       /* top: -0.4rem;
        left: -0.4rem;
        right: -0.4rem;
-       bottom: -0.4rem;
-       z-index: -1;
+       bottom: -0.4rem; */
+       inset: -0.4rem;
+       z-index: -99999;
       content: '';
-      /* height: 21rem;
-      width: 18rem; */
       border-radius: 0.8rem;
       background: #fff;
 
@@ -163,6 +195,9 @@ header{
 .rules_wrapper .close_btn {
     align-self: flex-end;
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     outline: none;
      height: 3rem;
@@ -196,3 +231,30 @@ header{
     padding-left: 1.5em;
     font-size: 0.8em;
 }
+
+.btn_style{
+    position: relative;
+     left: 82vw;
+    padding: 0.5rem 2rem;
+    border: 2px solid #fff;
+    outline: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #fff;
+    background: transparent;
+    border-radius: 0.6rem;
+    font-weight: 700;
+    cursor: pointer;
+     margin: 0 0.1rem;
+}
+
+.win_btn {
+  display: none;
+
+}
+.rules_active {
+    visibility: visible;
+}
+/* .rules_inactive {
+    visibility: hidden;
+} */
