@@ -11,14 +11,20 @@ body {
     background-color: var(--color-bg);
     height: 100vh;
     width: 100vw;
+    font-family: 'Roboto';
 }
-nav{
+
+a {
+    text-decoration: none;
+}
+                                        /* Score-Card Styles  */
+header{
     display: flex;
     justify-content: center;
     padding-top: 2rem;
 }
-.nav_wrapper {
-    gap: 3rem;
+.wrapper {
+    /* gap: 3rem; */
     width: 50%;
     display: flex;
     flex-direction: row;
@@ -27,44 +33,166 @@ nav{
     border-radius: 0.7rem;
   
 }
-
-.nav_wrapper .score_wrapper {
-   padding-top: 1.2rem;
-  
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    gap: 3rem;
-}
-.nav_wrapper .score_wrapper .score_container {
-    border: 1px solid #fff;
-    height: 110px;
-    width: 150px;
-    margin-right:1.5rem;
-    text-align: center;
-    font-size: 1.3rem;
-    color:#656565;
-    border-radius: 0.5rem;
-    background-color: #fff;
-    ;
-    /* text-wrap: wrap; */
-}
-.nav_wrapper .score_wrapper .score_container  .no_cust {
-    padding-top: 0.2rem;
-    font-size: 3rem;
-    color: #252525;
-    font-weight: 800;
-}
-li {
+.wrapper li {
     list-style: none;
     color: #fff;
+    margin-left: 1rem;
     font-size: 2rem;
-    line-height: 3rem;
-    margin-left: 2rem;
+    line-height: 2.5rem;
     font-weight: 800;
 }
+.wrapper .score_container {
+    height: 7rem;
+    width: 8.5rem;
+    padding-top: 0.5rem;
+    background-color: #fff;
+    border-radius: 0.8rem;
+    margin: 0.5rem 1rem 0.5rem 0;
+    color: #656565;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+    line-height: 1.2rem;
+}
 
-a {
-    text-decoration: none;
+.wrapper .score_container:nth-child(2) {
+    position: relative;
+    left: 9rem;
+}
+.wrapper .score_container span:nth-child(2) {
+    font-weight: 700;
+    font-size: 4rem;
+    color: #252525;
+    line-height: 4rem;
+}
+
+                               /* main section styles */
+
+.game {
+    min-width: 100%;
+    min-height: 10vh;
+    position: relative;
+    top: 5rem;
+  
+}
+
+.game .game_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 7rem;
+}
+
+.game_box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    height: 5rem;
+    width: 5rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #fff;
+}
+
+.game_box::before {
+    content: '';
+    position: absolute;
+    height: 6rem;
+    width: 6rem;
+    border: none;
+    border-radius: 100%;
+    z-index: -1;
+}
+
+.game .game_box:nth-child(1)::before {
+  background-color: #0074B6;
+}
+.game .game_box:nth-child(2)::before {
+    background-color: #BD00FF;
+}
+.game .game_box:nth-child(3)::before {
+    background-color: #FFA943;
+}
+
+.paper {
+  position: absolute;
+  top : 9rem;
+}
+
+                            /* Rules Styles  */
+
+.rules { 
+    position: relative;
+    left: 70vw;
+    top: 10vh;
+}
+
+.rules_wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    width: 17rem;
+    
+    background-color: #004429;
+    border-radius: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #fff;
+}
+.rules_wrapper::before {
+       position: absolute;
+       top: -0.4rem;
+       left: -0.4rem;
+       right: -0.4rem;
+       bottom: -0.4rem;
+       z-index: -1;
+      content: '';
+      /* height: 21rem;
+      width: 18rem; */
+      border-radius: 0.8rem;
+      background: #fff;
+
+
+}
+.rules_wrapper .close_btn {
+    align-self: flex-end;
+    position: absolute;
+    border: none;
+    outline: none;
+     height: 3rem;
+     width: 3rem;
+     top: -2rem;
+     right: -2rem;
+    cursor: pointer;
+    border-radius: 100%;
+    background: #FF0000;
+}
+.rules_wrapper .close_btn::before {
+    position: absolute;
+    content: '';
+    top: -0.2rem;
+    left: -0.2rem;
+    right: -0.2rem;
+    bottom: -0.2rem;
+    border-radius: 100%;
+    z-index: -1;
+    background: #fff;
+}
+.rules_wrapper h3 {
+    text-align: center;
+    padding: 0.8em;
+    font-size: 2rem;
+}
+.rules_wrapper li {
+    list-style: none;
+    text-align: left;
+    padding: 0.3em;
+    padding-left: 1.5em;
+    font-size: 0.8em;
 }

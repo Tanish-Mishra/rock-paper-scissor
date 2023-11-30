@@ -5,32 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.png" sizes="16x16" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <title>Rock Paper Scissor</title>
+    <link rel="shortcut icon" href="./icons/scissor.png" type="image/x-icon">
     <script src="script.js" defer></script>
 </head>
 <body>
-<nav>
-    <div class="nav_wrapper">
+                                 <!-- Score-Card -->
+<header>
+    <div class="wrapper">
         <ul> 
           <li>Rock</li>
           <li>Paper</li>
           <li>Scissors</li>
         </ul>
-        <div class="score_wrapper">
             <div class="score_container">
-                <p>Computer <br>Score</br></p>
-                <p id="c_score" class=" no_cust">0</p>
+                <span>Computer <div>Score</div></span>
+                <span id="c_score">0</span>
             </div>
             <div class="score_container">
-                <p>Your <br>Score</br></p>
-                <p id="h_score" class=" no_cust">0</p>
+                <span>Your <div>Score</div></span>
+                <span id="p_score">0</span>
             </div>
         </div>
+    </header>                           <!-- Game Section -->
+<main>
+ <section class="game">
+    <div class="game_wrapper">
+        <button class="game_box">
+            <img src="./icons/rock.svg" alt="rock" id="rock">
+        </button>
+        <button class="game_box">
+            <img src="./icons/scissor.svg" alt="scissor" id="scissor">
+        </button>
+        <div class="game_box paper">
+            <img src="./icons/paper.svg" alt="paper" id="paper">
+        </div>
     </div>
-</nav>
-
-<main> 
-
+ </section>
+<!-- <button class="rules_btn">Rules</button> -->
 </main>
+<footer>
+    <section class="rules">
+        <div class="rules_wrapper">
+            <button class="close_btn">X</button>
+            <h3>Game Rules</h3>
+            <ul>
+                <li><img src="./icons/rectangle.svg" alt="rectangle"> &nbsp;Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                <li><img src="./icons/rectangle.svg" alt="rectangle"> &nbsp; Agree ahead of time whether you'll count off "rock, paper, scissors, shoot" or "rock, paper, scissors."</li>
+                <li><img src="./icons/rectangle.svg" alt="rectangle"> &nbsp;Use rock, paper, scissors to settle minor decisions or simply play to pass the time.</li>
+                <li><img src="./icons/rectangle.svg" alt="rectangle"> &nbsp;If both players lay down the same hand, each player lays down another hand.</li>
+            </ul>
+        </div>
+     </section>
+</footer>
 </body>
 </html>
