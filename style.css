@@ -188,24 +188,42 @@ header {
     width: 6rem; */
   border: none;
   border-radius: 100%;
-  background: red;
   z-index: -1;
 }
+
+.game_wrapper_two .two_rock::before {
+    background-color: #0074b6;
+}
+.game_wrapper_two .paper_two::before {
+    background-color: #FFA943;
+}
+.game_wrapper_two .two_scissor::before {
+    background-color: #BD00FF;
+}
+
+.game_two_btn_hidden {
+ visibility: hidden;
+}
+/* .game_two_btn_visible {
+ visibility: visible;
+} */
+
+
+.pc_two_rock::before {
+    background : #0074b6;
+}
+.pc_two_scissor::before {
+    background : #BD00FF;
+}
+.pc_paper_two::before {
+    background : #FFA943;
+}
+
 
 .game_wrapper_two .user_pick {
   text-align: left;
   padding: 0 2rem 2.5rem 0;
   color: #fff;
-}
-
-.game_wrapper_two .game_box_two:nth-child(1)::before {
-  background-color: #bd00ff;
-}
-.game_wrapper_two .game_box_two:nth-child(2)::before {
-  background-color: red;
-}
-.game_wrapper_two .game_box_two:nth-child(3)::before {
-  background-color: red;
 }
 
 .win_lose_cont {

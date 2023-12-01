@@ -60,15 +60,15 @@ function startGameTwo() {
 
 // class Selector for user and pc for game two to change buttons
 // user
-const userPaperStyle = document.getElementById("gameTwoPaper");
-const userRockStyle = document.getElementById("gameTwoRock");
-const userScissorStyle = document.getElementById("gameTwoScissor");
+const userPaperStyle = document.querySelector('.paper_two');
+const userRockStyle = document.querySelector('.two_rock');
+const userScissorStyle = document.querySelector('.two_scissor');
 
 // class selector for user for game two to change buttons
 // pc
-let pcPaperStyle = document.getElementById("pc_paper");
-let pcRockStyle = document.getElementById("pc_rock");
-let pcScissorStyle = document.getElementById("pc_scissor");
+let pcPaperStyle = document.querySelector('.pc_paper_two');
+let pcRockStyle = document.querySelector('.pc_two_rock');
+let pcScissorStyle = document.querySelector('.pc_two_scissor');
 
 // Game Logic
 playAgain.addEventListener("click", () => {
@@ -78,15 +78,27 @@ playAgain.addEventListener("click", () => {
 });
 
 userRock.addEventListener("click", function () {
+        userRockStyle.classList.remove('game_two_btn_hidden');
+        userPaperStyle.classList.add('game_two_btn_hidden');
+        userScissorStyle.classList.add('game_two_btn_hidden');
   startGameTwo();
   pc = computerPlay();
   if (pc === "rock") {
+    pcPaperStyle.classList.add('game_two_btn_hidden');
+    pcRockStyle.classList.remove('game_two_btn_hidden');
+    pcScissorStyle.classList.add('game_two_btn_hidden');
     tie();
   } else if (pc === "paper") {
+    pcPaperStyle.classList.remove('game_two_btn_hidden');
+    pcRockStyle.classList.add('game_two_btn_hidden');
+    pcScissorStyle.classList.add('game_two_btn_hidden');
     lose();
     pcScore++;
     changePcScore(pcScore);
   } else {
+    pcPaperStyle.classList.add('game_two_btn_hidden');
+    pcRockStyle.classList.add('game_two_btn_hidden');
+    pcScissorStyle.classList.remove('game_two_btn_hidden');
     win();
     userScore++;
     changeUserScore(userScore);
@@ -95,15 +107,27 @@ userRock.addEventListener("click", function () {
 });
 
 userPaper.addEventListener("click", () => {
+        userPaperStyle.classList.remove('game_two_btn_hidden');
+        userRockStyle.classList.add('game_two_btn_hidden');
+        userScissorStyle.classList.add('game_two_btn_hidden');
   startGameTwo();
   pc = computerPlay();
   if (pc === "rock") {
+    pcPaperStyle.classList.add('game_two_btn_hidden');
+    pcRockStyle.classList.remove('game_two_btn_hidden');
+    pcScissorStyle.classList.add('game_two_btn_hidden');
     win();
     userScore++;
     changeUserScore(userScore);
   } else if (pc == "paper") {
+    pcPaperStyle.classList.remove('game_two_btn_hidden');
+    pcRockStyle.classList.add('game_two_btn_hidden');
+    pcScissorStyle.classList.remove('game_two_btn_hidden');
     tie();
   } else {
+    pcPaperStyle.classList.add('game_two_btn_hidden');
+    pcRockStyle.classList.add('game_two_btn_hidden');
+    pcScissorStyle.classList.remove('game_two_btn_hidden');
     lose();
     pcScore++;
     changePcScore(pcScore);
@@ -112,17 +136,29 @@ userPaper.addEventListener("click", () => {
 });
 
 userScissor.addEventListener("click", () => {
+    userPaperStyle.classList.add('game_two_btn_hidden');
+    userRockStyle.classList.add('game_two_btn_hidden');
+    userScissorStyle.classList.remove('game_two_btn_hidden');
   startGameTwo();
   pc = computerPlay();
   if (pc === "rock") {
+    pcPaperStyle.classList.add('game_two_btn_hidden');
+    pcRockStyle.classList.remove('game_two_btn_hidden');
+    pcScissorStyle.classList.add('game_two_btn_hidden');
     lose();
     pcScore++;
     changePcScore(pcScore);
   } else if (pc == "paper") {
+    pcPaperStyle.classList.remove('game_two_btn_hidden');
+    pcRockStyle.classList.add('game_two_btn_hidden');
+    pcScissorStyle.classList.add('game_two_btn_hidden');
     win();
     userScore++;
     changeUserScore(userScore);
   } else {
+    pcPaperStyle.classList.add('game_two_btn_hidden');
+    pcRockStyle.classList.add('game_two_btn_hidden');
+    pcScissorStyle.classList.remove('game_two_btn_hidden');
     tie();
   }
   nextBtnVisible();
