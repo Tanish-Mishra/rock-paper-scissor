@@ -161,6 +161,8 @@ nextbtn.addEventListener('click',() => {
     nextbtn.classList.add('win_btn');
     document.querySelector('.btn_style').classList.add('newindex'); // for rules css
     document.querySelector('.rules').classList.add('newpage'); // for rules css
+    hideRules();
+
 });
    // reload page using the play again button 
 
@@ -176,6 +178,7 @@ nextbtn.addEventListener('click',() => {
          nextbtn.classList.add('win_btn');
          document.querySelector('.btn_style').classList.remove('newindex'); // for rules css 
          document.querySelector('.rules').classList.remove('newpage'); // for rules css
+         hideRules();
        changePcScore(pcScore);
        gameReload();
    }    
