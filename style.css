@@ -1,397 +1,385 @@
 :root {
-    --color-bg: #89C15E;
+  --color-bg: #89c15e;
 }
-*{
-    margin: 0;
-    padding: 0; 
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: var(--color-bg);
-    height: 100vh;
-    /* width: 100vw; */
-    max-width: 100%;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    font-family: 'Roboto';
+  background-color: var(--color-bg);
+  height: 100vh;
+  /* width: 100vw; */
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-family: "Roboto";
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
-                                        /* Score-Card Styles  */
-header{
-    display: flex;
-    justify-content: center;
-    padding-top: 2rem;
+/* Score-Card Styles  */
+header {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
 }
 .wrapper {
-    /* gap: 3rem; */
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    /* flex-wrap: wrap; */
-    border: 2px solid #fff;
-    border-radius: 0.7rem;
-  
+  /* gap: 3rem; */
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  border: 2px solid #fff;
+  border-radius: 0.7rem;
 }
 .wrapper li {
-    list-style: none;
-    color: #fff;
-    margin-left: 1rem;
-    font-size: 2rem;
-    line-height: 2.5rem;
-    font-weight: 800;
+  list-style: none;
+  color: #fff;
+  margin-left: 1rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 800;
 }
 .wrapper .score_container {
-    height: 7rem;
-    width: 8.5rem;
-    padding-top: 0.5rem;
-    background-color: #fff;
-    border-radius: 0.8rem;
-    margin: 0.5rem 1rem 0.5rem 0;
-    color: #656565;
-    font-weight: 600;
-    text-align: center;
-    font-size: 1rem;
-    text-transform: uppercase;
-    line-height: 1.2rem;
+  height: 7rem;
+  width: 8.5rem;
+  padding-top: 0.5rem;
+  background-color: #fff;
+  border-radius: 0.8rem;
+  margin: 0.5rem 1rem 0.5rem 0;
+  color: #656565;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  line-height: 1.2rem;
 }
 
 .wrapper .score_container:nth-child(2) {
-    position: relative;
-    left: 9rem;
+  position: relative;
+  left: 9rem;
 }
 .wrapper .score_container span:nth-child(2) {
-    font-weight: 700;
-    font-size: 4rem;
-    color: #252525;
-    line-height: 4rem;
+  font-weight: 700;
+  font-size: 4rem;
+  color: #252525;
+  line-height: 4rem;
 }
 
-                               /* main section styles */
+/* main section styles */
 
 .game {
-    /* min-width: 100%; */
-    min-height: 10vh;
-    position: relative;
-    top: 5rem;
-  
+  /* min-width: 100%; */
+  min-height: 10vh;
+  position: relative;
+  top: 5rem;
 }
 
 .game .game_wrapper {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 7rem;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 7rem;
 }
 
 .game_box {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    height: 5rem;
-    width: 5rem;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    background-color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  height: 5rem;
+  width: 5rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: #fff;
 }
 
 .game_box::before {
-    content: '';
-    position: absolute;
-    inset: -0.6rem;
-    /* height: 6rem;
+  content: "";
+  position: absolute;
+  inset: -0.6rem;
+  /* height: 6rem;
     width: 6rem; */
-    border: none;
-    border-radius: 100%;
-    z-index: -1;
+  border: none;
+  border-radius: 100%;
+  z-index: -1;
 }
 
 .game .game_box:nth-child(2)::before {
-  background-color: #0074B6;
+  background-color: #0074b6;
 }
 .game .game_box:nth-child(3)::before {
-    background-color: #BD00FF;
+  background-color: #bd00ff;
 }
 .game .game_box:nth-child(4)::before {
-    background-color: #FFA943;
-   
+  background-color: #ffa943;
 }
 
 .paper {
   position: absolute;
-  top : 9rem;
+  top: 9rem;
 }
-                           /* Line Styles */
+/* Line Styles */
 .game_wrapper .lines {
-    position: absolute;
+  position: absolute;
 }
-.game_wrapper .lines span{
-    position: absolute;
-    display: inline-block;
-    height: 0.8rem;
-    width: 10rem;
-    background: rgba(0, 0, 0, 0.64);
-    z-index: -1;
-    
-} 
+.game_wrapper .lines span {
+  position: absolute;
+  display: inline-block;
+  height: 0.8rem;
+  width: 10rem;
+  background: rgba(0, 0, 0, 0.64);
+  z-index: -1;
+}
 
 .game_wrapper .lines span:nth-child(1) {
-left: -5rem;
-top: 2.3rem;
+  left: -5rem;
+  top: 2.3rem;
 }
 .game_wrapper .lines span:nth-child(2) {
-    left: -9.5rem;
-    top: 6rem;
-    rotate: 50deg;
-    }
-    .game_wrapper .lines span:nth-child(3) {
-        left: -0.3rem;
-        top: 6rem;
-        rotate: 130deg;
-        }
-                                 /* Play Game Styles  */
+  left: -9.5rem;
+  top: 6rem;
+  rotate: 50deg;
+}
+.game_wrapper .lines span:nth-child(3) {
+  left: -0.3rem;
+  top: 6rem;
+  rotate: 130deg;
+}
+/* Play Game Styles  */
 
 .game_two {
-    min-height: 10vh;
-    position: relative;
-    top: 5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    /* gap: 7rem; */
+  min-height: 10vh;
+  position: relative;
+  top: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* gap: 7rem; */
 }
 
 .game_two .game_wrapper_two .game_box_two {
-    position: absolute;
-     display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    height: 5rem;
-    width: 5rem;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    background-color: #fff;
-   
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  height: 5rem;
+  width: 5rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: #fff;
 }
 
 .game_wrapper_two .game_box_two::before {
-    content: '';
-    content: '';
-    position: absolute;
-    inset: -0.6rem;
-    /* height: 6rem;
+  content: "";
+  content: "";
+  position: absolute;
+  inset: -0.6rem;
+  /* height: 6rem;
     width: 6rem; */
-    border: none;
-    border-radius: 100%;
-    background: red;
-    z-index: -1;
+  border: none;
+  border-radius: 100%;
+  background: red;
+  z-index: -1;
 }
 
 .game_wrapper_two .user_pick {
-    text-align: left;
-    padding: 0 2rem 2.5rem 0;
-    color: #fff;
+  text-align: left;
+  padding: 0 2rem 2.5rem 0;
+  color: #fff;
 }
 
 .game_wrapper_two .game_box_two:nth-child(1)::before {
-    background-color: #BD00FF;
+  background-color: #bd00ff;
 }
 .game_wrapper_two .game_box_two:nth-child(2)::before {
-    background-color: red;
+  background-color: red;
 }
 .game_wrapper_two .game_box_two:nth-child(3)::before {
-    background-color: red;
+  background-color: red;
 }
 
 .win_lose_cont {
-    color: #fff;
-    padding: 4.2rem 4.5rem 0 2rem;
-    font-size: 2rem;
-    text-transform: uppercase;
+  color: #fff;
+  padding: 4.2rem 4.5rem 0 2rem;
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 
-.win_lose_cont .win_lose_text{
-    font-size: 3rem;
-    text-wrap: nowrap;
-    text-align: center;
+.win_lose_cont .win_lose_text {
+  font-size: 3rem;
+  text-wrap: nowrap;
+  text-align: center;
 }
 
 .win_lose_cont .against_text {
-     font-size: 1.5rem;
-     text-align: center;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .win_lose_cont .play_again_btn {
-    margin: 0 0 0 0.5rem;
-    padding: 0.5rem 2.5rem;
-    border: 2px solid #fff;
-    outline: none;
-    text-transform: uppercase;
-    font-size: 1rem;
-    color: #6B6B6B;
-    /* background: transparent; */
-    border-radius: 0.6rem;
-    font-weight: 700;
-    cursor: pointer;
+  margin: 0 0 0 0.5rem;
+  padding: 0.5rem 2.5rem;
+  border: 2px solid #fff;
+  outline: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #6b6b6b;
+  /* background: transparent; */
+  border-radius: 0.6rem;
+  font-weight: 700;
+  cursor: pointer;
 }
-                            /* Rules Styles  */
+/* Rules Styles  */
 
-.rules { 
-    position: relative;
-    visibility: hidden;
-    left: 70vw;
-    top: -2rem;
-    
+.rules {
+  position: relative;
+  visibility: hidden;
+  left: 70vw;
+  top: -2rem;
 }
 .newpage {
-    top: -28rem;
+  top: -28rem;
 }
 .rules_wrapper {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 20rem;
-    width: 17rem;
-    background-color: #004429;
-    border-radius: 0.8rem;
-    font-size: 0.9rem;
-    font-weight: 400;
-    line-height: 1.5em;
-    color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 20rem;
+  width: 17rem;
+  background-color: #004429;
+  border-radius: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #fff;
 }
 .rules_wrapper::before {
-       position: absolute;
-       /* top: -0.4rem;
+  position: absolute;
+  /* top: -0.4rem;
        left: -0.4rem;
        right: -0.4rem;
        bottom: -0.4rem; */
-       inset: -0.4rem;
-       z-index: -99999;
-      content: '';
-      border-radius: 0.8rem;
-      background: #fff;
-
-
+  inset: -0.4rem;
+  z-index: -99999;
+  content: "";
+  border-radius: 0.8rem;
+  background: #fff;
 }
 .rules_wrapper .close_btn {
-    align-self: flex-end;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    outline: none;
-     height: 3rem;
-     width: 3rem;
-     top: -2rem;
-     right: -2rem;
-    cursor: pointer;
-    border-radius: 100%;
-    background: #FF0000;
+  align-self: flex-end;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  height: 3rem;
+  width: 3rem;
+  top: -2rem;
+  right: -2rem;
+  cursor: pointer;
+  border-radius: 100%;
+  background: #ff0000;
 }
 .rules_wrapper .close_btn::before {
-    position: absolute;
-    content: '';
-    top: -0.2rem;
-    left: -0.2rem;
-    right: -0.2rem;
-    bottom: -0.2rem;
-    border-radius: 100%;
-    z-index: -1;
-    background: #fff;
+  position: absolute;
+  content: "";
+  top: -0.2rem;
+  left: -0.2rem;
+  right: -0.2rem;
+  bottom: -0.2rem;
+  border-radius: 100%;
+  z-index: -1;
+  background: #fff;
 }
 .rules_wrapper h3 {
-    text-align: center;
-    padding: 0.8em;
-    font-size: 2rem;
+  text-align: center;
+  padding: 0.8em;
+  font-size: 2rem;
 }
 .rules_wrapper li {
-    list-style: none;
-    text-align: left;
-    padding: 0.3em;
-    padding-left: 1.5em;
-    font-size: 0.8em;
+  list-style: none;
+  text-align: left;
+  padding: 0.3em;
+  padding-left: 1.5em;
+  font-size: 0.8em;
 }
 
-.btn_style{
-    position: relative;
-     left: 82vw;
-    padding: 0.5rem 2rem;
-    border: 2px solid #fff;
-    outline: none;
-    text-transform: uppercase;
-    font-size: 1rem;
-    color: #fff;
-    background: transparent;
-    border-radius: 0.6rem;
-    font-weight: 700;
-    cursor: pointer;
-     margin: 0 0.1rem;
+.btn_style {
+  position: relative;
+  left: 82vw;
+  padding: 0.5rem 2rem;
+  border: 2px solid #fff;
+  outline: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #fff;
+  background: transparent;
+  border-radius: 0.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 0 0.1rem;
 }
 
 .newindex {
-     top: -24.4rem; 
+  top: -24.4rem;
 }
 
 /* container Two Win Display Styles */
 .container_two {
-    position: relative;
-    /* height: 100vh;
+  position: relative;
+  /* height: 100vh;
     width: 100vw; */
-    /* margin: 5rem 0 0 0; */
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  /* margin: 5rem 0 0 0; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .container_two * {
-   padding: 2rem;
+  padding: 2rem;
 }
 
-.container_two .reload_page{
-    margin: 0 0 0 0.8rem;
-    padding: 0.5rem 2rem;
-    border: 2px solid #fff;
-    outline: none;
-    text-transform: uppercase;
-    font-size: 1rem;
-    color: #6B6B6B;
-    /* background: transparent; */
-    border-radius: 0.6rem;
-    font-weight: 700;
-    cursor: pointer;
-    
+.container_two .reload_page {
+  margin: 0 0 0 0.8rem;
+  padding: 0.5rem 2rem;
+  border: 2px solid #fff;
+  outline: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #6b6b6b;
+  /* background: transparent; */
+  border-radius: 0.6rem;
+  font-weight: 700;
+  cursor: pointer;
 }
 .reload_page a {
-    text-decoration: none;
+  text-decoration: none;
 }
 .prize {
- position: absolute;
- top: 5.9rem;
+  position: absolute;
+  top: 5.9rem;
 }
-                                  /* Visibility Styles  */
+/* Visibility Styles  */
 .win_btn {
   visibility: hidden;
-
 }
 .rules_active {
-    visibility: visible;
+  visibility: visible;
 }
 /* .rules_inactive {
     visibility: hidden;
 } */
 
 .hidden {
-    display: none;
+  display: none;
 }
-
-                                      
