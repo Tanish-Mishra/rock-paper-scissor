@@ -30,26 +30,56 @@
         </div>
     </header>                           <!-- Game Section -->
 <main>
- <section class="game">
+ <section class="game " id="gameOne">
     <div class="game_wrapper">
         <div class="lines">
             <span class="line_one"></span>
             <span class="line_two"></span>
             <span class="line_three"></span>
         </div>
-        <button class="game_box">
+        <button class="game_box" id="user_rock">
             <img src="./icons/rock.svg" alt="rock" id="rock">
         </button>
-        <button class="game_box">
+        <button class="game_box" id="user_scissor">
             <img src="./icons/scissor.svg" alt="scissor" id="scissor">
         </button>
-        <div class="game_box paper">
+        <div class="game_box paper" id="user_paper">
             <img src="./icons/paper.svg" alt="paper" id="paper">
         </div>
        
     </div>
-    
  </section>
+                       <!-- Game Section two  -->
+ <section class="game_two hidden" id="gameTwo">
+    <div class="game_wrapper_two">
+        <h3 class="user_pick">You Picked</h3>
+        <button class="game_box_two" id="gameTwoRock" >
+            <img src="./icons/rock.svg" alt="rock" id="rock">
+        </button>
+        <button class="game_box_two" id="gameTwoScissor">
+            <img src="./icons/scissor.svg" alt="scissor" id="scissor">
+        </button>
+        <div class="game_box paper_two" id="gameTwoPaper">
+            <img src="./icons/paper.svg" alt="paper" id="paper">
+        </div>
+    </div>
+    <div class="win_lose_cont">
+        <h3 class="win_lose_text" id="result_text">You Win</h3>
+        <h3 class="against_text">Against Pc</h3>
+        <button class="play_again_btn" id="play_again">Play Again</button>
+    </div>
+    <div class="game_wrapper_two">
+        <h3 class="user_pick">Pc Picked</h3>
+        <button class="game_box_two" id="pc_rock">
+            <img src="./icons/rock.svg "  alt="rock" id="rock">
+        </button>
+        <button class="game_box_two" id="pc_scissor">
+            <img src="./icons/scissor.svg" alt="scissor" id="scissor">
+        </button>
+        <div class="game_box paper_two" id="pc_paper">
+            <img src="./icons/paper.svg" alt="paper" id="paper">
+        </div>
+    </section>
 <!-- <button class="rules_btn">Rules</button> -->
 </main>
 <footer>
@@ -66,7 +96,7 @@
         </div>
      </section>
      <button class="rules_btn btn_style" tabindex="1">Rules</button>
-     <button class="win_btn btn_style" tabindex="1">Next</button>
+     <button class="win_btn btn_style" id="next_btn">Next</button>
 </footer>
 </body>
 </html>
