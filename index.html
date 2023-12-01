@@ -10,93 +10,112 @@
     <link rel="shortcut icon" href="./icons/scissor.png" type="image/x-icon">
     <script src="script.js" defer></script>
 </head>
+
 <body>
-                                 <!-- Score-Card -->
-<header>
-    <div class="wrapper">
-        <ul> 
-          <li>Rock</li>
-          <li>Paper</li>
-          <li>Scissors</li>
-        </ul>
-            <div class="score_container">
-                <span>Computer <div>Score</div></span>
-                <span id="c_score">0</span>
+    <!-- Score-Card -->
+    <div class="container_one">
+        <header>
+            <div class="wrapper">
+                <ul>
+                    <li>Rock</li>
+                    <li>Paper</li>
+                    <li>Scissors</li>
+                </ul>
+                <div class="score_container">
+                    <span>Computer <div>Score</div></span>
+                    <span id="c_score">0</span>
+                </div>
+                <div class="score_container">
+                    <span>Your <div>Score</div></span>
+                    <span id="p_score">0</span>
+                </div>
             </div>
-            <div class="score_container">
-                <span>Your <div>Score</div></span>
-                <span id="p_score">0</span>
+        </header> <!-- Game Section -->
+        <main>
+            <section class="game " id="gameOne">
+                <div class="game_wrapper">
+                    <div class="lines">
+                        <span class="line_one"></span>
+                        <span class="line_two"></span>
+                        <span class="line_three"></span>
+                    </div>
+                    <button class="game_box" id="user_rock">
+                        <img src="./icons/rock.svg" alt="rock" id="rock">
+                    </button>
+                    <button class="game_box" id="user_scissor">
+                        <img src="./icons/scissor.svg" alt="scissor" id="scissor">
+                    </button>
+                    <div class="game_box paper" id="user_paper">
+                        <img src="./icons/paper.svg" alt="paper" id="paper">
+                    </div>
+
+                </div>
+            </section>
+            <!-- Game Section two  -->
+            <section class="game_two hidden" id="gameTwo">
+                <div class="game_wrapper_two">
+                    <h3 class="user_pick">You Picked</h3>
+                    <button class="game_box_two" id="gameTwoRock">
+                        <img src="./icons/rock.svg" alt="rock" id="rock">
+                    </button>
+                    <button class="game_box_two" id="gameTwoScissor">
+                        <img src="./icons/scissor.svg" alt="scissor" id="scissor">
+                    </button>
+                    <div class="game_box paper_two" id="gameTwoPaper">
+                        <img src="./icons/paper.svg" alt="paper" id="paper">
+                    </div>
+                </div>
+                <div class="win_lose_cont">
+                    <h3 class="win_lose_text" id="result_text">You Win</h3>
+                    <h3 class="against_text">Against Pc</h3>
+                    <button class="play_again_btn" id="play_again">Play Again</button>
+                </div>
+                <div class="game_wrapper_two">
+                    <h3 class="user_pick">Pc Picked</h3>
+                    <button class="game_box_two" id="pc_rock">
+                        <img src="./icons/rock.svg " alt="rock" id="rock">
+                    </button>
+                    <button class="game_box_two" id="pc_scissor">
+                        <img src="./icons/scissor.svg" alt="scissor" id="scissor">
+                    </button>
+                    <div class="game_box paper_two" id="pc_paper">
+                        <img src="./icons/paper.svg" alt="paper" id="paper">
+                    </div>
+            </section>
+            <!-- <button class="rules_btn">Rules</button> -->
+        </main>
+
+    </div>
+
+    <div class="container_two hidden">
+        <img src="./assets/stars.png" alt="stars">
+        <img src="./assets/prize.svg" alt="prize" class="prize">
+        <img src="./assets/hurray-text.svg" alt="hurray">
+        <img src="./assets/won-game.png" alt="won-game">
+        <div class="reload_page_cont">
+            <button class="reload_page" id="reload_page_btn">Play Again</button>
+        </div>
+    </div>
+    <footer>
+        <section class="rules">
+            <div class="rules_wrapper">
+                <button class="close_btn"><img src="/icons/x.png" alt="x"></button>
+                <h3>Game Rules</h3>
+                <ul>
+                    <li><img src="./icons/rectangle.svg" alt="rectangle"> &nbsp;Rock beats scissors, scissors beat
+                        paper, and paper beats rock.</li>
+                    <li><img src="./icons/rectangle.svg" alt="rectangle"> &nbsp; Agree ahead of time whether you'll
+                        count off "rock, paper, scissors, shoot" or "rock, paper, scissors."</li>
+                    <li><img src="./icons/rectangle.svg" alt="rectangle"> &nbsp;Use rock, paper, scissors to settle
+                        minor decisions or simply play to pass the time.</li>
+                    <li><img src="./icons/rectangle.svg" alt="rectangle"> &nbsp;If both players lay down the same hand,
+                        each player lays down another hand.</li>
+                </ul>
             </div>
-        </div>
-    </header>                           <!-- Game Section -->
-<main>
- <section class="game " id="gameOne">
-    <div class="game_wrapper">
-        <div class="lines">
-            <span class="line_one"></span>
-            <span class="line_two"></span>
-            <span class="line_three"></span>
-        </div>
-        <button class="game_box" id="user_rock">
-            <img src="./icons/rock.svg" alt="rock" id="rock">
-        </button>
-        <button class="game_box" id="user_scissor">
-            <img src="./icons/scissor.svg" alt="scissor" id="scissor">
-        </button>
-        <div class="game_box paper" id="user_paper">
-            <img src="./icons/paper.svg" alt="paper" id="paper">
-        </div>
-       
-    </div>
- </section>
-                       <!-- Game Section two  -->
- <section class="game_two hidden" id="gameTwo">
-    <div class="game_wrapper_two">
-        <h3 class="user_pick">You Picked</h3>
-        <button class="game_box_two" id="gameTwoRock" >
-            <img src="./icons/rock.svg" alt="rock" id="rock">
-        </button>
-        <button class="game_box_two" id="gameTwoScissor">
-            <img src="./icons/scissor.svg" alt="scissor" id="scissor">
-        </button>
-        <div class="game_box paper_two" id="gameTwoPaper">
-            <img src="./icons/paper.svg" alt="paper" id="paper">
-        </div>
-    </div>
-    <div class="win_lose_cont">
-        <h3 class="win_lose_text" id="result_text">You Win</h3>
-        <h3 class="against_text">Against Pc</h3>
-        <button class="play_again_btn" id="play_again">Play Again</button>
-    </div>
-    <div class="game_wrapper_two">
-        <h3 class="user_pick">Pc Picked</h3>
-        <button class="game_box_two" id="pc_rock">
-            <img src="./icons/rock.svg "  alt="rock" id="rock">
-        </button>
-        <button class="game_box_two" id="pc_scissor">
-            <img src="./icons/scissor.svg" alt="scissor" id="scissor">
-        </button>
-        <div class="game_box paper_two" id="pc_paper">
-            <img src="./icons/paper.svg" alt="paper" id="paper">
-        </div>
-    </section>
-<!-- <button class="rules_btn">Rules</button> -->
-</main>
-<footer>
-    <section class="rules">
-        <div class="rules_wrapper">
-            <button class="close_btn"><img src="/icons/x.png" alt="x"></button>
-            <h3>Game Rules</h3>
-            <ul>
-                <li><img src="./icons/rectangle.svg" alt="rectangle"> &nbsp;Rock beats scissors, scissors beat paper, and paper beats rock.</li>
-                <li><img src="./icons/rectangle.svg" alt="rectangle"> &nbsp; Agree ahead of time whether you'll count off "rock, paper, scissors, shoot" or "rock, paper, scissors."</li>
-                <li><img src="./icons/rectangle.svg" alt="rectangle"> &nbsp;Use rock, paper, scissors to settle minor decisions or simply play to pass the time.</li>
-                <li><img src="./icons/rectangle.svg" alt="rectangle"> &nbsp;If both players lay down the same hand, each player lays down another hand.</li>
-            </ul>
-        </div>
-     </section>
-     <button class="rules_btn btn_style" tabindex="1">Rules</button>
-     <button class="win_btn btn_style" id="next_btn">Next</button>
-</footer>
+        </section>
+        <button class="rules_btn btn_style" tabindex="1">Rules</button>
+        <button class="win_btn btn_style" id="next_btn">Next</button>
+    </footer>
 </body>
+
 </html>

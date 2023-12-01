@@ -1,3 +1,4 @@
+
 const choices = ["rock","paper","scissors"];
                 //  Computer Random Picker Logic
 
@@ -60,18 +61,19 @@ let result_text = document.getElementById('result_text');
 //     gameTwo.classList.remove('hidden');
 //  },1000)
 
-// class Selector for user and pc for game two 
+// class Selector for user and pc for game two to change buttons 
+          // user 
+const userPaperStyle = document.getElementById('gameTwoPaper');
+const userRockStyle = document.getElementById('gameTwoRock');
+const userScissorStyle = document.getElementById('gameTwoScissor');
  
-// class selector for user for game two
+// class selector for user for game two to change buttons 
+        // pc
+ let pcPaperStyle = document.getElementById('pc_paper');
+ let pcRockStyle = document.getElementById('pc_rock');
+ let pcScissorStyle = document.getElementById('pc_scissor');
 
-// let userPaperStyle = document.getElementById('gameOnePaper');
-// let userRockStyle = document.getElementById('gameOneRock');
-// let userScissorStyle = document.getElementById('gameOneScissor');
 
-// class selector for pc for game two
-//  let pcPaperStyle = document.getElementById('pc_paper');
-//  let pcRockStyle = document.getElementById('pc_rock');
-//  let pcScissorStyle = document.getElementById('pc_scissor');
   // Game Logic 
  playAgain.addEventListener('click',() => {
            gameOne.classList.remove('hidden');
@@ -80,25 +82,24 @@ let result_text = document.getElementById('result_text');
  });
 
   userRock.addEventListener('click',function() {
+     
        startGameTwo();
        pc = computerPlay();
     if(pc==="rock") {
-        pcPaperStyle.classList.add('hidden');
-        pcScissorStyle.classList.add('hidden');
+     
         tie();
     } else if(pc==="paper") {
-        pcRockStyle.classList.add('hidden');
-        pcScissorStyle.classList.add('hidden');
+       
         lose();
         pcScore++;
         changePcScore(pcScore);
     } else {
-        pcPaperStyle.classList.add('hidden');
-        pcRockStyle.classList.add('hidden');
+        
         win();
         userScore++;
         changeUserScore(userScore);
     }
+    nextBtnVisible();
   });
 
 
@@ -116,6 +117,7 @@ let result_text = document.getElementById('result_text');
         pcScore++;
         changePcScore(pcScore);
     }
+    nextBtnVisible();
   });
 
     userScissor.addEventListener('click',() => {  
@@ -132,15 +134,55 @@ let result_text = document.getElementById('result_text');
         } else {
             tie();
         }
+        nextBtnVisible();
       });
 
-       // next button visible 
-function nextBtnVisible() {
-    nextbtn.classList.remove('hidden');
-}
-function nextBtnHidden() {
-  nextbtn.classList.add('hidden');
-}
+
+ // container one and two selector
+ const contOne = document.querySelector('.container_one');
+ const contTwo = document.querySelector('.container_two');
+
+
+
+                    //  Next Button Win Logic 
+
+        // next button visible Logic
+        function nextBtnVisible() {
+            if(userScore > pcScore) {
+            nextbtn.classList.remove('win_btn'); 
+        } else if(userScore < pcScore) {
+            nextbtn.classList.add('win_btn');
+        }
+        }
+
+nextbtn.addEventListener('click',() => {
+    contOne.classList.add('hidden');
+    contTwo.classList.remove('hidden');
+    nextbtn.classList.add('win_btn');
+    document.querySelector('.btn_style').classList.add('newindex'); // for rules css
+    document.querySelector('.rules').classList.add('newpage'); // for rules css
+});
+   // reload page using the play again button 
+
+   // Game Reload function 
+   function gameReload() {
+    userScore = 0;
+    pcScore = 0;
+   changeUserScore(userScore);
+   contOne.classList.remove('hidden');
+         contTwo.classList.add('hidden');
+         gameOne.classList.remove('hidden');
+         gameTwo.classList.add('hidden');
+         nextbtn.classList.add('win_btn');
+         document.querySelector('.btn_style').classList.remove('newindex'); // for rules css 
+         document.querySelector('.rules').classList.remove('newpage'); // for rules css
+       changePcScore(pcScore);
+       gameReload();
+   }    
+
+   const reloadBtn = document.getElementById('reload_page_btn');
+   reloadBtn.addEventListener('click',gameReload); 
+ 
              //  Rules Logic 
 let rules = document.querySelector('.rules_btn');
 let closeRules = document.querySelector('.close_btn');
