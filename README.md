@@ -36,6 +36,6 @@ Visit the [Rock-Paper-Scissors Web App](https://rps-game-tanish.vercel.app) and 
 Your feedback is valuable! If you encounter any issues or have suggestions for improvement, please [contact us](mailto:tanishmishra97@gmail.com).
 
 ## About the Developer
-This Rock-Paper-Scissors web app was developed by [Your Name]. Connect with me on [LinkedIn](https://www.linkedin.com/in/tanish-mishra-5a7478265/) for more projects and updates.
+This Rock-Paper-Scissors web app was developed by [Tanish Mishra]. Connect with me on [LinkedIn](https://www.linkedin.com/in/tanish-mishra-5a7478265/) for more projects and updates.
 
 Enjoy playing Rock-Paper-Scissors!
