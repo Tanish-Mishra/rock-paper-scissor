@@ -3,7 +3,7 @@
 Welcome to the Rock-Paper-Scissors web app! Test your luck and strategy in this classic hand game.
 
 ## Play Now
-Visit the [Rock-Paper-Scissors Web App](https://rps-game-tanish.vercel.app) and challenge yourself against the computer.
+Visit the [Rock-Paper-Scissors Web App](https://rock-ps.vercel.app) and challenge yourself against the computer.
 
 ## Features
 - **User-Friendly Interface**: Simple and intuitive design for a seamless gaming experience.
