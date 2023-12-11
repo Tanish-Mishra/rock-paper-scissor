@@ -11,7 +11,7 @@ Visit the [Rock-Paper-Scissors Web App](https://rps-game-tanish.vercel.app) and 
 - **Score Tracking**: Keep track of your wins, losses, and ties.
 
 ## How to Play
-1. Open the [Rock-Paper-Scissors Web App](https://rps-game-tanish.vercel.app).
+1. Open the [Rock-Paper-Scissors Web App](https://rock-ps.vercel.app/).
 2. Choose your move: Rock, Paper, or Scissors.
 3. The computer will make its move simultaneously.
 4. Results will be displayed, indicating whether you won, lost, or it's a tie.
